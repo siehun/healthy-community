@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="io.yue.mapper.UserMapper">
+
+    <resultMap id="BaseResultMap" type="io.yue.pojo.entity.User">
+            <id property="id" column="id" jdbcType="BIGINT"/>
+            <result property="user_name" column="user_name" jdbcType="VARCHAR"/>
+            <result property="nick_name" column="nick_name" jdbcType="VARCHAR"/>
+            <result property="head_image" column="head_image" jdbcType="VARCHAR"/>
+            <result property="head_image_thumb" column="head_image_thumb" jdbcType="VARCHAR"/>
+            <result property="password" column="password" jdbcType="VARCHAR"/>
+            <result property="sex" column="sex" jdbcType="TINYINT"/>
+            <result property="type" column="type" jdbcType="SMALLINT"/>
+            <result property="signature" column="signature" jdbcType="VARCHAR"/>
+            <result property="last_login_time" column="last_login_time" jdbcType="TIMESTAMP"/>
+            <result property="created_time" column="created_time" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,user_name,nick_name,
+        head_image,head_image_thumb,password,
+        sex,type,signature,
+        last_login_time,created_time
+    </sql>
+</mapper>
